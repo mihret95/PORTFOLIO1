@@ -1,117 +1,422 @@
+
 <!DOCTYPE html>
+
 <html>
 
 <head>
     <title>Mihret Portfolio</title>
-
-    <!-- ✅ LINKING CSS FILE -->
     <link rel="stylesheet" href="style.css">
+<style>
+
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, sans-serif;
+        background:linear-gradient(to right, #dbd7d8, #e6ccff);
+        color:#333;
+    }
+
+    header{
+        background-color:#181bc2;
+        color:white;
+        text-align:center;
+        padding:40px;
+    }
+
+    header h1{
+        font-size:50px;
+        margin:0;
+    }
+
+    header p{
+        font-size:20px;
+    }
+
+    nav{
+        background-color: white;
+        padding:15px;
+        text-align:center;
+    }
+
+    nav a{
+        text-decoration:none;
+        color:#240e88;
+        font-weight:bold;
+        margin:15px;
+        font-size:18px;
+    }
+
+    nav a:hover{
+        background-color:#2318c2;
+        color:white;
+        padding:10px;
+        border-radius:5px;
+    }
+
+    section{
+        background-color:white;
+        width:80%;
+        margin:25px auto;
+        padding:25px;
+        border-radius:15px;
+        box-shadow:0px 0px 10px gray;
+    }
+
+    h2{
+        text-align:center;
+        color:#4b18c2;
+        text-transform:uppercase;
+    }
+
+    img{
+        display:block;
+        margin:auto;
+        border-radius:50%;
+        border:5px solid #3218c2;
+    }
+
+    p{
+        text-align:center;
+        font-size:18px;
+        line-height:30px;
+    }
+
+    ul{
+        list-style-type:square;
+        font-size:18px;
+    }
+
+    ol{
+        font-size:18px;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:20px;
+    }
+
+    table, th, td{
+        border:2px solid #1823c2;
+    }
+
+    th{
+        background-color:white;
+    }
+
+    th, td{
+        padding:12px;
+        text-align:center;
+    }
+
+    .skill-box{
+        background-color:#fce4ec;
+        padding:15px;
+        margin:10px;
+        border-left:5px solid #3218c2;
+        border-radius:10px;
+    }
+
+    .gallery img{
+        border-radius:10px;
+        margin:10px auto;
+    }
+
+    form{
+        text-align:center;
+    }
+
+    input, textarea, select{
+        width:70%;
+        padding:12px;
+        margin:10px;
+        border:1px solid #4518c2;
+        border-radius:5px;
+        font-size:16px;
+    }
+
+    input[type="submit"]{
+        background-color:#4518c2;
+        color:white;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    input[type="submit"]:hover{
+        background-color:#160e88;
+    }
+
+    footer{
+        background-color:#3d18c2;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:20px;
+    }
+
+</style>
+
 </head>
 
 <body>
 
 <header>
 
-    <h1>MIHRET PORTFOLIO</h1>
+<h1>MIHRET PORTFOLIO</h1>
 
-    <p>Student | Future Web Developer | Creative Girl</p>
+<p>Student | Future Web Developer | Creative Girl</p>
 
 </header>
 
 <nav>
 
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
+<a href="#about">About Me</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#education">Education</a>
+
+<a href="#hobbies">Hobbies</a>
+
+<a href="#contact">Contact</a>
 
 </nav>
 
-<!-- ABOUT -->
 <section id="about">
 
-    <h2>About Me</h2>
+<h2>About Me</h2>
 
-    <img src="data:image/jpeg;base64,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"
-         width="200"
-         height="200"
-         alt="Mihret Photo">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAQEBANEBAREA8NEBANEA8QDg8SFxEWFxURGRMYHSggGB0lGxMTITEhJSorLi4uFx8zODMsNygtLi0BCgoKDg0OFQ8QFSsZFRkrKysrKzc3Ky03KzcrNzctLSs3NysrKystLSsrLS0tLS0tLSsrKy0rKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAABQMEBgECB//EADQQAQACAAIIAwcDBQEBAAAAAAABAgMRBAUSITFBUWFxkcEiQoGhsdHhMnKCEzNS8PFiI//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A/cQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5a0RGczER1ndDRx9Z1jdSNrvO6Ab74vi1rxtWPGYhFxdMxLcbTEdK7oa64mrdtPw497PwiXxOs8Ppfyj7o4uJqxGs8Ppfyj7vuusMOfemPGJRAw10NMatuFqz4TGbI5pmwtKvXhafCd8fNMXV8TsDWccLxl3rw8m/h4kWjOsxMdkV9AAAAAAAAAAAAAAAANTS9OrTdHtW6co8WDTtP92k+No+kfdNWRLWTGx7XnO059I5R8GIFQZcDAtecqxn35R8WbQtD2987qx5z2hYpSIjKIiIjlBpjQw9Vx71p8K7vnLJOrKdb+cfZujOtYk4+rbRvrO12yyn8tKKzPCJnwh0Yupjm3jocXBraMrRE/XzSdM0Kab4316848V1Maj7wsS1ZzrMxPZ8AK+iawi262VZ6+7P2bzmm/oWnTXKt99eU86/hLFlVh5EvUUAAAAAAAAAATdY6ZxpWe1pj6M+sNJ2K5R+qeHaOqMsiWvAFQZtFwJvaK8uMz0hhWNV4OzTa523/DkUjcpWIiIjdEboegy0AAAAPLRExlO+J3S9AQtM0f+nbLlO+s+jXXdOwNukxzjfHj0QmozQAG9q/TNmdm36Z4T/jP2V3NK2rNJzjYnjEbu8dEsWN8BFAAAAAAHl7RETM8IjOXrQ1tjZVise9vnwj8/QE7SMWb2m08+EdI5QxA0yAA+sOm1MR1mIdFWuUREcI3Qi6trniR2ibenqtpVgAigAAAAACHp+Fs4k9J9qPj+c1xO1xTdW3SZr5/8WJUsBUH1S81mJjjE5w+QHQ4GLF6xaOfy7MiXqjG3zSeftR48/8Aeyoy0AAAAAAIWnYm1iWnlHsx4R/srWNfZraekTPyc6sSgCoAAoanr7Vp6ViPOfwqpmpuN/4+qmlWACKAAAAAANbWNc8O3bKfm2WDTf7d/wBsgggNMgAMmDibNq26Tn8OboYlzS9oN88Os9svLd6JVjOAigAAANXWVssO3fKPmiLGtp/+cfuj6SjtRmgAAAN/VFvbtHWuflP5VkTV1ssSvfOPktpVgAigAAAAADW1jbLDt8I+cNlO1vibq16ztT8P+/IEsBpkAAV9UW9iY6W9ISFPU07r/wAfUpFIBloAAABpa2/tx+6PpKOt6zrnh27ZT80RqM0AAABl0acr0/dX6ugQtBw9rEr2nanwhdSrABFAAAAAAEXWds8Se0RHr6rSNrSmWJn/AJRE+ixK0wFQAAU9Te//AB9UxW1RX2LT1t6QUjfAZaAAAAY8em1W0dYmPk550qBpeHs3tHfOPCd6xKwgKgADc0DSq4ecTXj70cfDJUw9JpbhaPDPKfJz70w10gl4WsYrWKxTdH/r8NrQtL/qbW7LLLnnxz+zLWtoAAAAa2maV/T2d2eefPLJrW1nWYmJpMxO7KZ3A3MTSqV42r4ROc+UJ2naZW8ZRWd05xad2XwaVss90ZRyjPPL4vGsZ0AAAAXdX0yw6942vPei4dNqYrHOYh0NYyjLpuSrHoCKAAAAJ2t8HdF45ezPhy/3uovnFpFoms8JjIHOD7xcOa2ms8YnL8vhpkAAAAVNTxuvPeI+v3S1zV+Fs4cZ8Z9qfj+MikbIDLQADQ1vX2az0t6Skr2mYW1S0c8s48YQWozQAAAAHtYmZiI3zO6Ab2qcHO025V3R4z+PqrMWjYOxWK+c9Z5srLQAAAAAAADR1no21G1HGOPeEh0qTrHRNmdusezPGP8AGfssqWNAGTDwrW/TWZ8OHmqMb1v4OrLT+qYr2jfLewNEpThG/rO+TTGjoWgTMxa8ZRxis8Z8VUGWgAAABL0/QZzm1Izz3zWOOfWFQBzbxex9FpfjG/rG6Wji6stH6Zie07pa1nE8ZMXBtX9VZjx4ebGApar0b35/j92DQdE25zn9Mce/ZZiEqx6AigAAAAAAADyYegNfD0LDic9mJ/dviPg2IgAAAAAAAAAAAAAJhq4ugYduWX7d3ybQD5pSIiIiMojdEPoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z "
+     width="200"
+     height="200"
+     alt="Mihret Photo">
 
-    <p>
-        Hello! My name is Mihret. I am a passionate student who enjoys technology, creativity, fitness, fashion, and web development.
-        I love learning new skills and improving myself every day.
-        My dream is to become a successful web developer and create beautiful websites in the future.
-    </p>
+<p>
+    Hello! My name is Mihret. I am a passionate student who enjoys
+    technology, creativity, fitness, fashion, and web development.
+    I love learning new skills and improving myself every day.
+    My dream is to become a successful web developer and create
+    beautiful websites in the future.
+</p>
 
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-    <h2>My Skills</h2>
 
-    <div class="skill-box">HTML Web Design</div>
-    <div class="skill-box">CSS Styling</div>
-    <div class="skill-box">Communication Skills</div>
-    <div class="skill-box">Team Work</div>
-    <div class="skill-box">Creativity</div>
+<h2>My Skills</h2>
+
+<div class="skill-box">
+    HTML Web Design
+</div>
+
+<div class="skill-box">
+    CSS Styling
+</div>
+
+<div class="skill-box">
+    Communication Skills
+</div>
+
+<div class="skill-box">
+    Team Work
+</div>
+
+<div class="skill-box">
+    Creativity
+</div>
+
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
-    <h2>Education</h2>
 
-    <table>
-        <tr>
-            <th>Level</th>
-            <th>Institution</th>
-            <th>Year</th>
-        </tr>
+<h2>Education</h2>
 
-        <tr>
-            <td>University</td>
-            <td>BITS College</td>
-            <td>2026</td>
-        </tr>
+<table>
 
-        <tr>
-            <td>High School</td>
-            <td>Addis Ababa School</td>
-            <td>2022</td>
-        </tr>
-    </table>
+    <caption><b>Educational Background</b></caption>
+
+    <tr>
+        <th>Level</th>
+        <th>Institution</th>
+        <th>Year</th>
+    </tr>
+
+    <tr>
+        <td>University</td>
+        <td>BITS College</td>
+        <td>2026</td>
+    </tr>
+
+    <tr>
+        <td>High School</td>
+        <td>Addis Ababa School</td>
+        <td>2022</td>
+    </tr>
+
+</table>
+
 </section>
 
-<!-- HOBBIES -->
 <section id="hobbies">
-    <h2>My Hobbies</h2>
 
-    <ol>
-        <li>Listening to Music</li>
-        <li>Watching Movies</li>
-        <li>Learning Coding</li>
-        <li>Gym and Fitness</li>
-        <li>Traveling</li>
-    </ol>
+<h2>My Hobbies</h2>
+
+<ol type="A">
+
+    <li>Listening to Music</li>
+
+    <li>Watching Movies</li>
+
+    <li>Learning Coding</li>
+
+    <li>Gym and Fitness</li>
+
+    <li>Traveling</li>
+
+</ol>
+
 </section>
 
-<!-- CONTACT -->
+<section>
+
+<h2>Favorite Things</h2>
+
+<ul>
+
+    <li>Pink Color</li>
+
+    <li>Fashion Design</li>
+
+    <li>Photography</li>
+
+    <li>Creative Art</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>My Daily Routine</h2>
+
+<dl>
+
+    <dt><b>Morning</b></dt>
+
+    <dd>Study and prepare for classes.</dd>
+
+    <dt><b>Afternoon</b></dt>
+
+    <dd>Attend lectures and practice coding.</dd>
+
+    <dt><b>Evening</b></dt>
+
+    <dd>Workout, relax and spend time with family.</dd>
+
+</dl>
+
+</section>
+
+<section class="gallery">
+
+<h2>Gallery</h2>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcg5wbAY3f_wSrK6vKO6AsAGGn-AuiQjp8CQ&s"
+     width="400"
+     height="200"
+     alt="Gallery Image">
+
+</section>
+
 <section id="contact">
-    <h2>Contact Me</h2>
 
-    <form>
-        <input type="text" placeholder="Enter Your Name">
-        <input type="email" placeholder="Enter Your Email">
-        <input type="password" placeholder="Enter Password">
+<h2>Contact Me</h2>
 
-        <input type="submit" value="Send Message">
-    </form>
+<form>
+
+    <input type="text"
+           placeholder="Enter Your Name">
+
+    <br>
+
+    <input type="email"
+           placeholder="Enter Your Email">
+
+    <br>
+
+    <input type="password"
+           placeholder="Enter Password">
+
+    <br>
+
+    <input type="date">
+
+    <br>
+
+    <input type="color">
+
+    <br><br>
+
+    Gender:
+    <input type="radio" name="gender">Male
+    <input type="radio" name="gender">Female
+
+    <br><br>
+
+    Languages:
+    <input type="checkbox">English
+    <input type="checkbox">Amharic
+    <input type="checkbox">Afaan Oromo
+
+    <br><br>
+
+    <select>
+
+        <option>Addis Ababa</option>
+
+        <option>Adama</option>
+
+        <option>Hawassa</option>
+
+    </select>
+
+    <br>
+
+    <textarea rows="5"
+              cols="30"
+              placeholder="Write Your Message"></textarea>
+
+    <br>
+
+    <input type="submit"
+           value="Send Message">
+
+</form>
+
 </section>
 
-<!-- FOOTER -->
+<section>
+
+<h2>Useful Link</h2>
+
+<p>
+
+    <a href="https://www.google.com">
+        Click Here To Visit Google
+    </a>
+
+</p>
+
+</section>
+
 <footer>
-    <p>Created By Mihret | 2026</p>
+
+<p>Created By Mihret | 2026</p>
+
+<p>Email: mihret@gmail.com</p>
+
 </footer>
 
 </body>
-</html>
+
+</html> i want this portfolio in html liinked and css code wih out not change in the portfolio full complites so send the codes
